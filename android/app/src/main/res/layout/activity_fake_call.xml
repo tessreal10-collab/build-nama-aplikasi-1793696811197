@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#075E54">
+
+    <!-- WhatsApp background gradient overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:alpha="0.95"/>
+
+    <!-- Top section with caller info -->
+    <LinearLayout
+        android:id="@+id/topSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <!-- Profile circle placeholder -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="24dp">
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:drawable/ic_menu_gallery"
+                android:backgroundTint="#FFFFFF"
+                android:alpha="0.3"/>
+                
+            <!-- You can add ImageView here for actual profile pic -->
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <!-- Caller name -->
+        <TextView
+            android:id="@+id/callerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unknown"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- WhatsApp subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panggilan suara WhatsApp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:alpha="0.8"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Caller number (optional) -->
+        <TextView
+            android:id="@+id/callerNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+628****5678"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:alpha="0.6"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!-- Bottom section with buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="32dp"
+        android:layout_marginBottom="64dp">
+
+        <!-- Reject button (red) -->
+        <LinearLayout
+            android:id="@+id/btnRejectContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="40dp">
+            
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@android:drawable/btn_default"
+                android:backgroundTint="#DC3545">
+                
+                <Button
+                    android:id="@+id/btnReject"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/ic_menu_close_clear_cancel"
+                    android:backgroundTint="#FFFFFF"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Accept button (green) -->
+        <LinearLayout
+            android:id="@+id/btnAcceptContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="40dp">
+            
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@android:drawable/btn_default"
+                android:backgroundTint="#25D366">
+                
+                <Button
+                    android:id="@+id/btnAccept"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/ic_menu_call"
+                    android:backgroundTint="#FFFFFF"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Message button (gray) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@android:drawable/btn_default"
+                android:backgroundTint="#555555">
+                
+                <Button
+                    android:id="@+id/btnMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/ic_menu_send"
+                    android:backgroundTint="#FFFFFF"/>
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Swipe up hint text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="Geser ke atas untuk menerima"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:alpha="0.6"/>
+
+</RelativeLayout>
