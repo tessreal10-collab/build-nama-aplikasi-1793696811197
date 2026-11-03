@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:id="@+id/messageContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:maxWidth="280dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_bubble_admin">
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="● ADMIN"
+            android:textColor="#dc2626"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="3dp" />
+
+        <TextView
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message text"
+            android:textColor="#f8fafc"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.5" />
+
+        <TextView
+            android:id="@+id/timeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:30"
+            android:textColor="#33ffffff"
+            android:textSize="7sp"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+</FrameLayout>
